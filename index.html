@@ -1,38 +1,139 @@
 <!DOCTYPE html>
 <html lang="da">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="layout.css">
+
+
 
 <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="icon" href="./favicon_io/favicon.ico">
+
+    <link rel="manifest" href="/site.webmanifest">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TASTEBOOK - Find inspiration til opskrifter</title>
+    <meta name="description"
+        content="Find inspiration til nye retter, søg efter opskrifter ud fra dine ingredienser, og saml dine favoritter på TASTEBOOK.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Climate+Crisis:YEAR@1979&family=Share+Tech&display=swap"
+        rel="stylesheet">
 </head>
 
+
 <body>
-    <div>
-        <div>
-            <h1>TASTEBOOK</h1>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./billeder/logo.png" alt="Logo">
+            </a>
         </div>
-        <div>
-            <img src="billeder/billede4.webp" alt="billede4">
-        </div>
-        <div>
-            <ul>
-                <li>Velkommen til en verden af opskrifter.
-                    Prøv idag
-                </li>
-                <li>TASTEBOOK er et kreativt sted for dig, der elsker god mad og
-                    nye idéer. Find
-                    inspiration til din næste ret, gem de opskrifter, du ikke vil glemme, og skab dine egne favoritter.
-                    Du kan søge efter
-                    retter ud fra de ingredienser, du allerede har derhjemme, og samle alt det, du elsker, ét sted.
-                    Find, gem og skab din
-                    egen samling af gode retter.</li>
+        <nav>
+            <ul class="menu">
+
+
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="inspiration.html">Inspiration</a></li>
+
+                <li><a href="minside.html">Min side</a></li>
+
             </ul>
-            <p></p>
+            <div class="soegning">
+                <input type="text" placeholder="Hvilke ingrdiensser vil du bruge?">
+                <button>Søg</button>
+            </div>
+
+            <button class="burger" aria-label="Åbn menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+
+
+        </nav>
+        <script src="menu.js"></script>
+    </header>
+    <main>
+        <div>
+            <div>
+                <h1>TASTEBOOK</h1>
+
+                <video class="forsidebillede" autoplay muted loop playsinline>
+                    <source src="billeder/IMG_0795.MOV" type="video/mp4">
+                </video>
+            </div>
+            <div>
+                <h2>Velkommen til en verden af opskrifter</h2>
+
+
+                <ul>
+
+
+
+                    <li>TASTEBOOK er et kreativt sted for dig, der elsker god mad og
+                        nye idéer. Find
+                        inspiration til din næste ret, gem de opskrifter, du ikke vil glemme, og skab dine egne
+                        favoritter.
+                        Du kan søge efter
+                        retter ud fra de ingredienser, du allerede har derhjemme, og samle alt det, du elsker, ét sted.
+                        Find, gem og skab din
+                        egen samling af gode retter.</li>
+                    <li>
+                        Prøv idag!
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+            <div class="placering_på_knapper_i_bunden">
+                <a class="knapper_i_bunden" href="inspiration.html">Inspiration</a>
+
+                <a class="knapper_i_bunden" href="minside.html">Min side</a>
+            </div>
+
+            <div>
+                <h2>Nyeste tilføjet retter</h2>
+            </div>
+            <div class="billedrulle">
+                <div class="rulle">
+                    <img src="billeder/billede19.webp" alt="">
+                    <img src="billeder/billede17.webp" alt="">
+                    <img src="billeder/billede18.webp" alt="">
+                    <img src="billeder/billede21.webp" alt="">
+                    <img src="billeder/billede24.webp" alt="">
+                    <img src="billeder/billede11.webp" alt="">
+                    <img src="billeder/billede12.webp" alt="">
+                    <img src="billeder/billede13.webp" alt="">
+                </div>
+            </div>
+
         </div>
-    </div>
+    </main>
+
+    <footer class="footer">
+
+        <h2>Lad os dele madglæden!</h2>
+
+        <p>
+            Invitér dine venner, del jeres favoritter
+            og find inspiration til nye opskrifter.
+        </p>
+
+        <a href="index.html" class="del_knap">
+            Del TASTEBOOK med en ven ♡
+        </a>
+
+
+
+        <p class="footer_copyright">
+            TASTEBOOK · Lavet af Vilde © 2026
+        </p>
+
+    </footer>
 </body>
+
 
 </html>

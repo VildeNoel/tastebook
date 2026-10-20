@@ -1,11 +1,586 @@
 /*************** Reset *********************/
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
+
 img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.forsidebillede {
+  position: relative;
+  width: 100%;
+  max-width: 90vw;
+  margin-inline: auto;
+  display: block;
+}
+h1 {
+  margin-left: 5%;
+  color: rgb(244, 199, 189);
+  z-index: 1;
+  margin-bottom: -2rem;
+  position: relative;
+  font-size: 50px;
+  @media (width > 700px) {
+    font-size: 100px;
+    margin-bottom: -4rem;
+  }
+}
+
+body {
+  background-color: rgb(168, 122, 93);
+}
+ul {
+  text-align: center;
+  margin: 8px;
+}
+
+h2 {
+  padding: 1.5rem;
+  text-align: center;
+  color: rgb(244, 199, 189);
+}
+
+/*************************** menu 
+
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(108, 61, 52);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(108, 61, 52);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu li {
+  margin-right: 25px;
+  margin-top: 15px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.menu a:hover {
+  color: brown;
+}
+
+.menu a {
+  color: rgb(244, 199, 189);
+
+  padding-inline: 0.5rem 1.5rem;
+
+  background-color: rgb(117, 83, 76);
+  border: 1px solid black;
+  margin-left: 20px;
+  text-decoration: none;
+}
+**********************/
+/************************'******** knapper i bunden **********************************************/
+
+.placering_på_knapper_i_bunden {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+.knapper_i_bunden {
+  color: rgb(244, 199, 189);
+  font-size: 20px;
+
+  background-color: rgb(168, 122, 93);
+  margin-left: 10px;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 15px 30px;
+  background-color: rgb(109, 76, 63);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/****************************'*****burgern menu************************************************/
+/*knapperne*/
+a {
+  color: rgb(244, 199, 189);
+  font-size: 20px;
+  font-family: "Arimo", sans-serif;
+  background-color: rgb(168, 122, 93);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 100;
+  background-color: rgb(109, 76, 63);
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+nav {
+  display: flex;
+  align-items: center;
+
+  @media (width < 800px) {
+    &.active .menu {
+      display: block;
+      background-color: rgb(109, 76, 63);
+      position: absolute;
+      top: 94px;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    &.active .menu li {
+      margin: 10px 20px;
+    }
+
+    &.active .menu a {
+      font-size: 24px;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-right: 20px;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    display: block;
+    padding: 10px;
+    color: rgb(244, 199, 189);
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: end;
+    :hover {
+      color: rgb(244, 199, 189) 000;
+    }
+  }
+  @media (width < 800px) {
+    display: none;
+  }
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: none;
+
+  .line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(244, 199, 189);
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+
+  @media (width < 800px) {
+    display: block;
+    background-color: transparent;
+    border: 0;
+
+    &.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
+    }
+
+    &.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    &.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+  }
+}
+
+/************************************ søgefelt ***********************************/
+
+.soegning {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.soegning input {
+  padding: 7px 12px;
+  width: 220px;
+  max-width: 70%;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-size: 12px;
+  background-color: rgb(244, 199, 189);
+}
+
+.soegning button {
+  padding: 7px 12px;
+  background-color: rgb(244, 199, 189);
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 12px;
+}
+/***************************************** footer ********************************'*/
+.lavet_af_vilde {
+  padding: 35px;
+  background-color: rgb(109, 76, 63);
+  color: black;
+  font-size: 1.4rem;
+}
+footer {
+  color: rgb(109, 76, 63);
+  margin-top: 5rem;
+}
+
+/****************************************** insiration ****************/
+.grid_billeder_til_inspiration {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-content: start;
+  gap: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  /******************************************* til computer ****************/
+  @media (width > 800px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+.grid_billeder_til_inspiration {
+  margin: 40px 5% 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-content: start;
+}
+
+.grid_billeder_til_inspiration .billede img,
+.grid_billeder_til_inspiration .billede video {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (width > 800px) {
+  .grid_billeder_til_inspiration {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/********************************* stjerne **********************************/
+.billede {
+  position: relative;
+}
+
+.billede img {
+  width: 100%;
+  display: block;
+}
+
+.favorit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: rgb(247, 217, 25);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (width < 800px) {
+  nav {
+    width: auto;
+  }
+}
+.billede video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/************************************ til helt lille skærm ***********************/
+@media (width < 400px) {
+  .soegning {
+    margin: 10px 5px;
+  }
+
+  .soegning input {
+    width: 130px;
+  }
+
+  .soegning button {
+    padding: 7px 8px;
+  }
+
+  nav {
+    min-width: 0;
+  }
+
+  .burger {
+    flex-shrink: 0;
+  }
+}
+
+/**************************** billedkarusel til forside *************************/
+.billedrulle {
+  overflow: hidden;
+  width: 100%;
+}
+
+.rulle {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  animation: rul 15s linear infinite;
+}
+
+.rulle img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+@keyframes rul {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-500px);
+  }
+}
+
+/***************************************** opret opskrift boks ********************/
+.ny_opskrift {
+  width: 1000px;
+  height: 150px;
+  border: 2px solid black;
+  background-color: rgb(109, 76, 63);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin: 20px auto;
+}
+
+/* Teksten og plusset */
+.ny_opskrift a {
+  text-decoration: none;
+  color: rgb(244, 199, 189);
+  font-size: 30px;
+  background-color: rgb(109, 76, 63);
+}
+
+/* Det store plus */
+.ny_opskrift span {
+  font-size: 55px;
+  display: block;
+}
+
+/* Teksten under plusset */
+.ny_opskrift p {
+  font-size: 25px;
+}
+/* Til mobil */
+@media (width < 800px) {
+  .ny_opskrift {
+    width: 85%;
+    height: 120px;
+    margin: 20px auto;
+  }
+
+  .ny_opskrift span {
+    font-size: 40px;
+  }
+
+  .ny_opskrift p {
+    font-size: 20px;
+  }
+}
+
+/***************************************** minside ********************/
+
+.grid_billeder_til_minside {
+  margin: 1px 5% 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  align-content: start;
+}
+
+/*********************** til computer ********************/
+
+@media (width > 800px) {
+  .grid_billeder_til_minside {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+/*********************** billeder og videoer ********************/
+
+.grid_billeder_til_minside .billede img,
+.grid_billeder_til_minside .billede video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/*********************** footer ********************/
+
+.footer {
+  margin-top: 50px;
+  padding: 30px 15px;
+  background-color: rgb(109, 76, 63);
+  color: rgb(244, 199, 189);
+  text-align: center;
+}
+
+.footer h3 {
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin-bottom: 20px;
+}
+
+.footer a {
+  background: none;
+  color: rgb(244, 199, 189);
+  margin: 0 8px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.footer .footer_copyright {
+  margin: 25px 0 0;
+  font-size: 12px;
+}
+
+/*********************** opret opskrift ********************/
+
+.opret_opskrift {
+  margin: 40px 8%;
+}
+
+.opret_opskrift h1 {
+  margin-bottom: 30px;
+}
+
+.opskrift_grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.opskrift_info p,
+.opskrift_billede p,
+.fremgang p {
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+.felt {
+  width: 100%;
+  min-height: 41px;
+  padding: 12px;
+  background-color: #ddd0d0;
+  color: #888;
+  font-size: 14px;
+}
+
+.beskrivelse {
+  height: 140px;
+}
+
+.detaljer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.ingredienser {
+  display: grid;
+  gap: 10px;
+}
+
+.upload_felt {
+  background-color: #ddd0d0;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.fremgang {
+  grid-column: 1 / -1;
+}
+
+.fremgang_felt {
+  min-height: 180px;
+}
+
+@media (max-width: 700px) {
+  .opskrift_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fremgang {
+    grid-column: auto;
+  }
+
+  .detaljer {
+    grid-template-columns: 1fr;
+  }
 }
